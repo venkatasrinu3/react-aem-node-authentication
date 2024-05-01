@@ -1,0 +1,25 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dflex-column{
+    display:flex;
+    flex-direction:column;
+}
+.mw-200{
+    max-width: 200;
+}
+input#mobileNumber::-webkit-outer-spin-button,
+input#mobileNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.acc-container{
+    background: rgb(244, 241, 241);
+    width: 700px;
+    padding:10px 10px;
+    border-radius: 10px;
+
+    
+}

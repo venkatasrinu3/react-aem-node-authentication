@@ -1,0 +1,15 @@
+.reducer-wrapper{
+    text-align: center;
+    & .complex-reducer{
+        padding: 8px 15px;
+        background: white;
+        border: 1px solid blue;
+        color: blue;
+        border-radius: 30px;
+        font-weight: 600;
+        &:hover{
+            background:blue;
+            color: white;
+        }
+    }
+}
