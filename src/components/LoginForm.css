@@ -1,7 +1,24 @@
+.login-page-wrapper{
+    height: 100vh;
+    background-image: linear-gradient(135deg, skyblue, violet);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 .form-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    row-gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 100px;
+    padding: 20px;
+    width: 500px;
+    border-radius: 16px;
+    height: 60%;
+    background: rgba(255,255,255,0.3);
 }
 .dflex-column{
     display:flex;
@@ -19,7 +36,15 @@ input#mobileNumber::-webkit-inner-spin-button {
     background: rgb(244, 241, 241);
     width: 700px;
     padding:10px 10px;
-    border-radius: 10px;
-
-    
+    border-radius: 10px;   
+}
+.width-50-percent{
+    width: 90% !important;
+    border: none;
+    margin: 10px 0;
+}
+.input-field{
+    background: whitesmoke;
+    border:none;
+    border-radius: 8px;
 }

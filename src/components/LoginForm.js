@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loginAction } from '../redux/LoginReducer';
-import {useLocation, useNavigate} from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./LoginForm.css"
+import { FormControl, FormHelperText, Input, InputLabel, TextField } from '@mui/material';
 
 const LoginForm = () => {
     const dispatch = useDispatch()
@@ -28,12 +29,64 @@ const LoginForm = () => {
     const location = useLocation();
 
     const navigateToReactLearning = () => {
-        navigate("/learn-react",{state: {name: "Srivatsava"}});
+        navigate("/learn-react", { state: { name: "Srivatsava" } });
     }
     return (
-        <>
+        <div className='login-page-wrapper'>
             <form onSubmit={handleSubmitForm} className="form-container">
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <FormControl className='width-50-percent'>
+                    <TextField
+                        id="my-input"
+                        aria-describedby="my-helper-text"
+                        label="First Name"
+                        name="firstName"
+                        inputMode='text'
+                        className='bg-light input-field'
+                        value={form.firstName}
+                        onChange={changeForm}
+                    />
+                    {/* <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText> */}
+                </FormControl>
+                <FormControl className='width-50-percent'>
+                    <TextField
+                        id="my-input"
+                        aria-describedby="my-helper-text"
+                        className='bg-light input-field'
+                        label="Last Name"
+                        name='lastName'
+                        inputMode='text'
+                        value={form.lastName}
+                        onChange={changeForm}
+                    />
+                    {/* <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText> */}
+                </FormControl>
+                <FormControl className='width-50-percent'>
+                    <TextField
+                        id="my-input"
+                        aria-describedby="my-helper-text"
+                        className='bg-light input-field'
+                        label="Email address"
+                        name='emailId'
+                        inputMode='email'
+                        value={form.emailId}
+                        onChange={changeForm}
+                    />
+                    {/* <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText> */}
+                </FormControl>
+                <FormControl className='width-50-percent'>
+                    <TextField
+                        id="my-input"
+                        aria-describedby="my-helper-text"
+                        className='bg-light input-field'
+                        label="Mobile number"
+                        inputMode='tel'
+                        value={form.mobileNumber}
+                        name='mobileNumber'
+                        onChange={changeForm}
+                    />
+                    {/* <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText> */}
+                </FormControl>
+                {/* <div className=''>
                     <label htmlFor='fName'>First Name</label>
                     <input type='text' id='fName' value={form.firstName} name='firstName' onChange={changeForm} className="form-control mw-200 mb-2" />
                 </div>
@@ -48,11 +101,11 @@ const LoginForm = () => {
                 <div className="d-flex flex-column">
                     <label htmlFor='email'>Email ID</label>
                     <input type='email' id='email' value={form.emailId} name='emailId' onChange={changeForm} className="form-control mw-200 mb-2" />
-                </div>
+                </div> */}
                 <button type='submit' className="my-3 btn btn-outline-success">
                     Submit
                 </button>
-                <div className='acc-container'>
+                {/* <div className='acc-container'>
                     <div className='d-flex justify-content-between'>
                         <h4 className="mb-0 text-3xl">Employee Details</h4>
                         <span className='cursor-pointer' onClick={handleShowData}>
@@ -81,10 +134,10 @@ const LoginForm = () => {
                             </tbody>
                         </table>
                     }
-                </div>
+                </div> */}
+                <button className='txt-btn' onClick={navigateToReactLearning}>Click here to learn react</button>
             </form>
-            <button className='txt-btn' onClick={navigateToReactLearning}>Click here to learn react</button>
-        </>
+        </div>
     )
 }
 export default LoginForm
